@@ -1,0 +1,1215 @@
+Python beginer
+    data structure or data type
+        primary data
+            int,float,string
+            list: [1,2,3,3]   ["strings","sdlh"]      
+            ["lshdf",3,0.3,3,"skdhf",4,5,4.567,"shdf"]         # go forward alots of information is bout list,tuple,all the things
+
+            tuple:()
+
+            set:{}  it avoid from repetition
+            ex:x{2,2,3,4,4,5,5,5,6,6,8}
+            >>>{{2,3,4,5,6}}               []. show all methods
+            Dictionary  or hash table {key,value}              {}.           "".
+                key
+                    int,float,string
+                value
+            Boolean or bool
+                True  1
+                False  0
+        advance data
+            Linked list
+            DSA
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Variables
+    x
+    no space in variables name use _ instead of space
+    no number at first character
+    no other character except abc number and _
+    reserved name can not be variable name like int,print......
+
+string
+    escape character
+        \",\n,\'\t,\a
+        ex: 'I\'m a developer'  or 'I"m a developer' 
+        ex:"I\"m a developer"    or  "I'm a developer"
+        ex: print('\a')       it will create a sound 
+    indexing and slicing
+        indexing: from long string  take one of its characterstic
+            ex:  x="I am Anil Amiri"
+            print(x[0])   >>>I
+            print(x[7])   >>>n
+            we can implement it on list,tuple but not on set
+        slicing: use to slicing or cutting each pese of code
+            x="I am Anil Amiri"
+            ex:print(x[0:5])
+            ex:print(x[5:9])
+            slicing with steps
+            print(x[0:9:2])
+            print(x[0:10:3])
+            print(x[0]+x[4]+x[9])
+
+    string method
+    "anil".         it will take out all the methods of string
+        ex: x="I am a saftware engineer"
+        x.split()       sparate according space with cotition in list
+        x.splite("a")      sparate according "a" with cotition in list
+        x.upper(),x.lower(),x.title(),x.find(r),x.capitalize(),x.center(40,'-'),
+        x.index("y"),x.endswith("eer"),x.startswith("I")....
+
+        a="anil amiri is coming to US"
+        print(a.split())
+        >>>['anil', 'amiri', 'is', 'coming', 'to', 'US']
+        b="-".join(['anil', 'amiri', 'is', 'coming', 'to', 'US'])      in some programs we can replace the word the split and jain is allso like that
+        print(b)
+        >>>anil-amiri-is-coming-to-US
+        b="A".join(['anil', 'amiri', 'is', 'coming', 'to', 'US'])
+        print(b)
+        >>>anilAamiriAisAcomingAtoAUS
+
+        a="anil amiri is coming to US"
+        print(a.split())
+        b=a.replace("i","z")
+        print(b)
+        >>>anzl amzrz zs comzng to US
+
+    string formating
+        f-string
+            name="Anil"
+            age=20
+            jap="developer"
+            print(f"I am {name}, my age is {age},my jap is{jap})
+            print(f"I am {name}, my age is {age+2},my jap is{len(jap)})
+        .format()
+            name="Anil"
+            age=20
+            jap="developer"
+            string="I am {}, my age is {}, my jap is {}".format(name,age,jap)
+            print(string)
+            string="I am {b}, my age is {c}, my jap is {a}".format(a=jap,b=name,c=age)
+            print(string)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+list
+    X=3
+    del X
+    print(x)           >>>name 'x' is not define
+    ex: a=['anil', 'amiri', 'is', 'coming', 'to', 'US']
+        print(a[::-1])
+        >>>['US', 'to', 'coming', 'is', 'amiri', 'anil']
+        list is changable but tuple is not changable     and for get put its method>>>  [].
+        a[1]="nit"
+        a[0]="slhdfh"
+        print(a)
+        >>>['slhdfh', 'nit', 'is', 'coming', 'to', 'US']
+
+    x=[1,2,3,4,5]
+    x.clear()
+    print(x)     >>>[]
+
+    x=[1,2,3,4,"pip",5,"hi"]
+    x.remove("hi")
+    print(x)      >>>[1, 2, 3, 4, 'pip', 5]
+    
+    x=[1,2,3,4,"pip",5,"hi"]
+    x2=x.copy()
+    print(x2)         >>>[1, 2, 3, 4, 'pip', 5, 'hi']
+    x3=x
+    print(x3)           >>>[1, 2, 3, 4, 'pip', 5, 'hi']
+
+    x=[1,2,3,4,"pip",5,"hi"]
+    n=x.count("8")
+    print(n)     >>>0
+    m=x.count(4)
+    print(m)       >>>1
+    print(x.count("pip"))      >>>1
+
+    x=[1,2,3,4,"pip",5,"hi"]
+    x1=["sdhf",3,5,"jlsdf"]
+    x.extend(x1)               #jain x with x1 we will use extend() to jain lists
+    print(x)        >>>[1, 2, 3, 4, 'pip', 5, 'hi', 'sdhf', 3, 5, 'jlsdf']
+    x.extend(x)
+    print(x)        >>>[1, 2, 3, 4, 'pip', 5, 'hi', 'sdhf', 3, 5, 'jlsdf', 1, 2, 3, 4, 'pip', 5, 'hi', 'sdhf', 3, 5,'jlsdf']
+
+    x=[1,2,3,4,"pip",5,"hi"]
+    print(x.index("pip"))     >>>4
+
+    x=[1,2,3,4,"pip",5,"hi"]
+    x.insert(0,"flsdhfshgsh")
+    print(x)            >>>['flsdhfshgsh', 1, 2, 3, 4, 'pip', 5, 'hi']
+    x.insert(3,"lshdfklsdh")
+    print(x)           >>>['flsdhfshgsh', 1, 2, 'lshdfklsdh', 3, 4, 'pip', 5, 'hi']
+
+    x=[1,2,3,4,"pip",5,"hi"] # pop will delete from back one one
+    x.pop()
+    print(x) >>>[1, 2, 3, 4, 'pip', 5]
+    x.pop()
+    print(x)    >>>[1, 2, 3, 4, 'pip']
+
+    x=[1,2,3,4,"pip",5,"hi"] 
+    x.reverse()
+    print(x)    >>>['hi', 5, 'pip', 4, 3, 2, 1]
+
+    x=[1,5,7,9,34,88,90,234,1,2,0,8,235,232,456367,1234]
+    x.sort()
+    print(x)       >>>[0, 1, 1, 2, 5, 7, 8, 9, 34, 88, 90, 232, 234, 235, 1234, 456367]
+    x.sort(reverse=True)
+    print(x)       >>>[456367, 1234, 235, 234, 232, 90, 88, 34, 9, 8, 7, 5, 2, 1, 1, 0]
+
+# repeat and more information about list
+
+          example:
+            list=["anil","ahmad","mohammad",9879,987]
+            list[2]="anil"
+            print(list)    
+            >>>['anil', 'ahmad', 'anil', 9879, 987]
+            print(list.count("anil))
+            >>>2
+
+            append : we will add data at the end of list
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.clear()  #clear will clean all the data of list
+            print(list)
+            >>>[]
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.remove("anil")    #remove: it will clean the data that we will take
+            print(list)
+            >>>['ahmad', 'mohammad', 9879, 987, 'ggg', 'ggg']
+
+
+            list=["anil","ahmad","mohammad",9879,987]
+            list.insert(3,"jjj")    #first show the postion and second put the data
+            print(list)        # in 3 postion put jjj
+            >>>['anil', 'ahmad', 'mohammad', 'jjj', 9879, 987]
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.copy()
+            print(list)
+            >>>["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.extend("it is car photo")   #extend : splite the characterstic of them and put them in list,even space of it
+            print(list)
+            >>>['anil', 'ahmad', 'mohammad', 9879, 987, 'ggg', 'ggg', 'i', 't', ' ', 'i', 's', ' ', 'c', 'a', 'r', ' ', 'p', 'h', 'o', 't', 'o']
+
+            list.index()
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.pop()
+            list.pop()    #it will clean from end one one
+            list.pop()     # three pop used and three item from list deleted
+            print(list)
+            >>>['anil', 'ahmad', 'mohammad', 9879]
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.pop(1)   #we cal also show for pop to delete which item of list
+            print(list)
+            >>>['anil', 'mohammad', 9879, 987, 'ggg', 'ggg']
+
+            list=["anil","ahmad","mohammad",9879,987,"ggg","ggg"]
+            list.reverse()   #it will reverse the list
+            print(list)
+            >>>['ggg', 'ggg', 987, 9879, 'mohammad', 'ahmad', 'anil']
+
+            list=[34,56,12,2,6,9,35,15,14,17,10]
+            list.sort()    #it will manage from down to up 
+            print(list)
+            >>> [2, 6, 9, 10, 12, 14, 15, 17, 34, 35, 56]
+
+            list=["naw","sow","ani","kle","bo","do","eo"]
+            list.sort()     #it also manage according the alphabite of english
+            print(list)
+            >>>['ani', 'bo', 'do', 'eo', 'kle', 'naw', 'sow']
+
+            list=["naw","sow","ani","klelsdfjlsd","bo","do","eo"]
+            del list[3]    #it will delete the item that you take position of it
+            print(list)     #look it delete the third item "klelsdfjlsd
+            >>>['naw', 'sow', 'ani', 'bo', 'do', 'eo']
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+tuple
+    tuple can not saport all methods only can saport count and index
+    x=(1,5,7,9,34,88,90,234,1,2,0,8,235,232,456367,1234)
+    x.pop()
+    print(x)
+    >>> it will not get out because tuple does not have this method     
+
+    x[2]="sldjf"    not passible
+    print(x)
+    # example:
+    tuple=("anil","you","me","you","you")
+    print(tuple.count("you"))
+    >>>3
+
+    tuple=("anil","you","me","you","you")  #index: show the position of item that you clear it in index
+    print(tuple.index("me"))
+    >>>2
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Dictionary
+    item
+        key  >>> int,float,string
+        value  >>> everthing
+
+    ex:
+
+    dect={
+    "name":"anil",
+    "jap":"saftware engineer",
+    "tasr":"conguretheworld"
+    }
+    print(dect["name"])    >>>anil
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    for i in dict:
+        print(i)    # it only get out keys of it
+        >>>name
+        last
+        jap
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict["last"]="khan"
+    print(dict)
+    >>>{'name': 'anil', 'last': 'khan', 'jap': 'Software Engineer'}
+    
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    for key,value in dict.items():
+        print(f"{key}:{value}")
+    >>> name:anil
+        last:amiri
+        jap:Software Engineer
+
+    
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict.pop("jap")   #it will delete the item of dictionary when you put in pop key or key,value
+    print(dict)
+    >>>{'name': 'anil', 'last': 'amiri'}
+    dict.pop("last","amiri)
+    >>>{'name': 'anil', 'jap':'Software Engineer}
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    x=dict
+    x3=x.copy()
+    print(x3)
+    >>>{'name': 'anil', 'last': 'amiri', 'jap': 'Software Engineer'}
+
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    print(dict.values())
+    >>>dict_values(['anil', 'amiri', 'Software Engineer'])
+    print(dict.keys())
+    >>>dict_keys(['name', 'last', 'jap'])
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    print(dict.get("name"))
+    >>>anil
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict.clear()   # it will clean all the keys and values of dict
+    print(dict)
+    >>>{}
+
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict2={                             #update: it will new the dict by dict2
+        "name":"ahmad",
+        "last":"khan",
+        "jap":"teacher"
+    }
+    dict.clear()
+    dict.update(dict2)
+    print(dict)
+    >>>{'name': 'ahmad', 'last': 'khan', 'jap': 'teacher'}
+
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict.fromkeys("name","anil")
+    print(dict)
+    >>>{'name': 'anil', 'last': 'amiri', 'jap': 'Software Engineer'}
+
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict.setdefault("picture")     #it will put key in dict and value for it
+    dict["picture"]="flower"
+    print(dict)
+    >>>{'name': 'anil', 'last': 'amiri', 'jap': 'Software Engineer', 'picture': 'flower'}
+
+
+    dict={
+        "name":"anil",
+        "last":"amiri",
+        "jap":"Software Engineer"
+    }
+    dict.popitem()   # it will clean from end one one
+    print(dict)
+    >>>{'name': 'anil', 'last': 'amiri'}
+
+
+    
+    list=[
+        [1,2,3,4,5],
+        [6,7,8,9,43]
+    ]
+    print(list[0])  >>>[1, 2, 3, 4, 5]
+    print(list[1][3])    >>>9
+
+
+    list=[
+        [1,2,3,4,5],
+        [
+            [34,45,57,634,444]
+        ],
+        "string"
+    ]
+
+    print(list[1][0][4])     >>>444
+    print(list[2][2])   >>>r
+
+
+    d={
+        "item1":[
+            {"sub item 1":{
+                "sub item 2":[
+                    [1,2,3],["pyton","c++",("hi","hello","nice")]
+                ]
+            }
+            }
+        ]
+    }
+    print(d["item1"][0]["sub item1"]["sub item2"][1][2][1])
+
+
+    list={"anil":98,"ahmad":87}
+    print(list.get("anil"))   >>>98
+
+    list={"anil":98,"ahmad":87}
+    print(list.keys())      >>>dict_keys(['anil', 'ahmad'])
+
+
+    list={"anil":98,"ahmad":87}
+    list.pop("anil")
+    print(list)        >>>{'ahmad': 87}
+    print(list.pop("ahmad"))   >>>87
+
+
+    list={"anil":98,"ahmad":87}
+    list2={"anil":100,"ahmad":78}
+    list.update(list2)
+    print(list)              >>>{'anil': 100, 'ahmad': 78}
+
+
+    list={"anil":98,"ahmad":87}
+    list2={"anil":100,"ahmad":78,"name":64}
+    list.update(list2)
+    print(list)                         >>>{'anil': 100, 'ahmad': 78, 'name': 64}
+
+
+    list2={"anil":100,"ahmad":78,"name":64}
+    list2.setdefault("picture")
+    print(list2)                       >>>{'anil': 100, 'ahmad': 78, 'name': 64, 'picture': None}
+    list2["picture"]="lksdjf;lasdjf"
+    print(list2)              >>>{'anil': 100, 'ahmad': 78, 'name': 64, 'picture': 'lksdjf;lasdjf'}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+set
+    #it will avoid from repetition, set is {},we will use from set in Data Sciance for delete the repetite data
+    ex:
+        list={"anil","anil","ahmad"}
+        print(list)
+        >>>{'anil','ahmad'}
+        
+        list={"anil","anil","ali","ahmad"}
+        print(list)            >>>{'anil', 'ahmad', 'ali'}
+        list.add("hkjkh")
+        print(list)     >>>{'anil', 'hkjkh', 'ahmad', 'ali'}
+        #if something is repeate it will write it
+        list.add("anil")
+        print(list)     >>>{'anil', 'hkjkh', 'ahmad', 'ali'}
+
+        # it is range 
+            list[0]       >>> 'set' object is not subscriptable
+    
+        a={1,2,3,4,5,6}
+        b={3,4,7,8,9,1,3}
+        print(a.difference(b))  >>>{2, 5, 6}
+        print(b.difference(a))    >>>{8, 9, 7}
+    #only show those numbers that not repeate to both sets
+        a={1,2,3,4,5,7}
+        b={3,4,7}
+        a.difference_update(b)
+        print(a)   >>>{1, 2, 5}
+
+    # to remove one item from set
+        a={1,2,3,4,5,7}
+        a.discard(7)
+        print(a)     >>>{1, 2, 3, 4, 5}
+    #repeate item in both sets
+        a={1,2,3,4,5,7}
+        b={3,4,7,765}
+        print(a.intersection(b))   >>>{3, 4, 7}
+    #only get those number which is repeate to both steps
+        a={1,2,3,4,5,7}
+        b={3,4,7}
+        a.intersection_update(b)
+        print(a)  >>{1,2,5}
+    #some mothods of set
+        S1={1,2,3,4,5}
+        S2={8,9,10,7}
+        print(S1.isdisjoint(S2))
+       >>>True
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7}
+        print(S1.issubset(S2))    >>>False
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7}
+        print(S1.issuperset(S2))   >>>False
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7}
+        S1.pop()   # in set pop will delete from beginning 
+        print(S1)    >>>{2, 3, 4, 5, 6, 7, 8, 9}
+
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7}       #union in set will jain two set create new set and avoid from repeate number
+        print(S1.union(S2))   >>>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7}       
+        S1.update(S2)  from S2 bring new item in S1
+        print(S1)>>>  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+        S1={1,2,3,4,5,6,7,8,9}
+        S2={8,9,10,7,4,3,2}       
+        print(S1.symmetric_difference(S2))  >>>{1, 5, 6, 10}
+
+        set={45,444456,34,23,23,12,23,35,2,3,5,6,78,12}
+        set2={23,35,2,3,5,6,78,12}
+        set.symmetric_difference_update(set2)
+        print(set)
+        >>>{34, 444456, 45}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    operator and sign special compiler
+        #regularition : 
+                \W+@gmail.com # it means that we should have have it at the end otherwise it is False
+        anilgmail.com ==> False
+        anil@gmail.com==>True
+
+        operators
+            mathematics operators
+                +,-,*,**,/,//,% madula
+                    a=3**1/2
+                    print(a)   >>>1.5
+            comperhansion operators
+                >,<,=>,=<,==,!=
+            logical operators
+                and &&,or //,not !,json
+                && it is not passible in python it should be like that : and
+
+            a="this is a book"
+            s=tuple(a)  # we can change the string to tuple
+            print(s)    >>>('t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 'b', 'o', 'o', 'k')
+
+            #we can not change the string to dictionary
+            a="this is a book"
+            s=dict(a)
+            print(s)     >>>ValueError: dictionary update sequence element #0 has length 1; 2 is required
+
+            #we can change the string to set, it also avoid from repeate items
+            a="this is a book"
+            s=set(a)
+            print(s)      >>>{'o', ' ', 'i', 'b', 'a', 'h', 'k', 't', 's'}
+
+            #we change the string to list 
+            a="this is a book"
+            s=list(a)
+            print(s)    >>>['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 'b', 'o', 'o', 'k']
+
+            #we can split the string and join it once agian
+            a="book that can play with you"
+            c=a.split()
+            print(c)         >>>['book', 'that', 'can', 'play', 'with', 'you']
+
+            print("".join(c))   >>>bookthatcanplaywithyou
+
+            #when you want to change the set into string ,dic
+            import json
+            a={1,2,3,"sdaf","sadf","asdfsad",("pyton","c++",1,2)}
+            print(str(a))  it is passible
+            print(dict(a))   it is not passible
+            print(json.dumps(a))
+            print(json.road(a))
+        Statement
+            simple Statement
+            Multi line Statement
+                conditional Statement
+                    if,elif,else
+                    example:
+                        year=int(input("Enter to find leap year"))
+                        if year%400==0:
+                            if year%100==0:      # if indentition in if it is called nestite condition
+                                if year%4==0:
+                                    print("it is leap")
+                                else:
+                                    print("it is not leap")
+                            else:
+                                print("it is leap")
+                        else:
+                            print("it is not leap")
+                loop Statement
+                    for (it is limitite),while (it can can be limitite and it can also be unlimitite)
+                #we have two kind of function  generate function and simple function
+                    generate function ex: range
+
+                #example of it:
+                dict={
+                        "name":"Anil",
+                        "f_name":"Essmatullah",
+                        "last":"Amiri",
+                        "phone":123456789
+                    }
+                    for i in dict:
+                        print(i)
+                           >>> name
+                            f_name
+                            last
+                            phone
+                #if we only want to find the values
+                dict={
+                        "name":"Anil",
+                        "f_name":"Essmatullah",
+                        "last":"Amiri",
+                        "phone":123456789
+                    }
+                    for i in dict.values():
+                        print(i)
+                    >>> Anil
+                        Essmatullah
+                        Amiri
+                        123456789
+                # when we want to print both the values and keys
+                dict={
+                        "name":"Anil",
+                        "f_name":"Essmatullah",
+                        "last":"Amiri",
+                        "phone":123456789
+                    }
+                    for k,v in dict.items():
+                        print(f"{k}:{v}")
+                    
+                >>> name:Anil
+                    f_name:Essmatullah
+                    last:Amiri
+                    phone:123456789
+                #infinite loop (it is kind of loop that will not stop)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#For loop: 
+    #complete lesson of for loop
+                #finite loop (it is kind of loop that will stop in specified place)
+
+
+dict={
+    "name":["Ahmad","mohmmad","Ali"],
+    "score":[344,675,353]
+}
+#loop throw a dictionary
+for (key,value) in dict.items():
+    print(key,value)
+>>>name ['Ahmad', 'mohmmad', 'Ali']
+score [344, 675, 353]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                error handling 
+                function or methods
+                classess or oop
+
+
+print("prictical")
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+collactions Medula:   (Counter,namedtuple,ordereddict,defaultdict,deque)
+example: 
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    print(Counter(a))
+    >>>Counter({'s': 4, 'd': 4, 'f': 4, 'n': 3, 'a': 1, 'j': 1})
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    show=Counter(a)
+    print(show.values())
+    >>>dict_values([1, 3, 4, 4, 4, 1])
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    show=Counter(a)
+    print(show.items())
+    >>>dict_items([('a', 1), ('n', 3), ('s', 4), ('d', 4), ('f', 4), ('j', 1)])
+
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    b="sdjflkjdssdn"
+    show=Counter(a)
+    show1=Counter(b)
+    print(show.total())
+    >>>17
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    b="sdjflkjdssdn"
+    show=Counter(a)
+    show1=Counter(b)
+    print(show.most_common(2))   #it will show you the 2 most commen items
+    >>>[('s', 4), ('d', 4)]
+
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    b="sdjflkjdssdn"
+    show=Counter(a)
+    show1=Counter(b)
+    print(show.most_common(2)[1])
+    print(show.most_common(2)[1][0])
+    >>>('d', 4)
+    >>>d
+
+
+    from collections import Counter
+    a="ansdfsdjfdsdsnfnf"
+    b="sdjflkjdssdn"
+    show=Counter(a)
+    show1=Counter(b)
+    print(list(show.elements()))
+    >>>['a', 'n', 'n', 'n', 's', 's', 's', 's', 'd', 'd', 'd', 'd', 'f', 'f', 'f', 'f', 'j']
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#File handling with methods of it
+example:
+    with open("my_file") as show:
+    a=show.readlines()
+    print(a)
+
+    a=open("my_file")
+    b=a.readlines()
+    print(b)
+    >>> ['this is the pen that we can play football']
+        ['this is the pen that we can play football']
+
+
+    with open("my_file") as show:
+    a=show.readline()
+    print(a)
+
+    a=open("my_file")
+    b=a.readline()
+    print(b)
+    >>> this is the pen that we can play football
+        this is the pen that we can play football
+
+
+
+    with open("my_file") as show:
+    a=show.seek(7)   #seek():bring file painter to place that you clear for it in this example fill painter is in 3 position
+    b=show.tell()    #tel():show the position of file painter
+    print(a)
+    >>>7
+    print(b)
+    >>>7
+
+    a=open("my_file")
+    b=a.seek(10)
+    print(b)
+    >>>10
+    c=a.tell()
+    print(c)
+    >>>10
+
+
+    with open("my_file") as show:
+    a=show.fileno()
+    print(a)
+    >>>3
+
+    a=open("my_file")
+    b=a.fileno()
+    print(b)
+    >>>3
+
+
+    with open("my_file") as show:
+    a=show.flush()
+    print(a)
+    >>>None
+
+    a=open("my_file")
+    b=a.flush()
+    print(b)
+    >>>None
+
+
+    with open("my_file") as show:
+    a=show.isatty()
+    print(a)
+    >>>False
+
+
+    with open("my_file") as show:
+    a=show.readable()
+    print(a)
+    >>>True
+
+    with open("my_file") as show:
+    a=show.seekable()
+    print(a)
+    >>>True
+
+
+    with open("my_file") as show:
+    a=show.truncate()
+    print(a)
+    >>>    a=show.truncate()
+            ^^^^^^^^^^^^^^^
+        io.UnsupportedOperation: truncate
+
+
+    with open("my_file") as show:
+    a=show.writable()
+    print(a)
+    >>>False
+
+
+    with open("my_file") as show:
+    a=show.writelines("t")
+    print(a)
+    >>>    a=show.writelines("t")
+            ^^^^^^^^^^^^^^^^^^^^
+        io.UnsupportedOperation: not writable    
+
+    
+    a=open("my_file")
+    b=a.name
+    print(b)
+    >>>my_file
+
+
+    a=open("my_file")
+    b=a.mode
+    print(b)
+    >>>r    #it means in read mode 
+
+    a=open("my_file")
+    b=a.closed   #closed: show what if the file close or not if close ==True elif not close ==False
+    print(b)
+    >>>False
+
+    a=open("my_file")
+    b=a.buffer
+    print(b)
+    >>><_io.BufferedReader name='my_file'>
+
+
+    a=open("my_file")
+    b=a.encoding
+    print(b)
+    >>>cp1252
+
+    a=open("my_file")
+    b=a.errors
+    print(b)
+    >>>strict
+
+    a=open("my_file")
+    b=a.line_buffering
+    print(b)
+    >>>False
+
+    a=open("my_file")
+    b=a.newlines
+    print(b)
+    >>>None
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Handling Errors and Exceptions
+
+    #FileNo Found it
+    with open("hpfff","r") as show:
+        show.read()
+        print(show)
+        >>>    with open("hpfff","r") as show:
+                ^^^^^^^^^^^^^^^^^
+        FileNotFoundError: [Errno 2] No such file or directory: 'hpfff'
+
+    
+    #Key Error
+    dictionary={"key":"value"}
+    print(dictionary["non_exiting-key"])  #this is key that you search is not exits
+    >>>    print(dictionary["non_exiting-key"])
+                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+        KeyError: 'non_exiting-key'
+
+    dict={
+        "name":"ali",
+        "f_name":"Zaher",
+        "jap":"Teacher"
+    }
+    print(dict["last"])
+    >>>    print(dict["last"])
+                ~~~~^^^^^^^^
+        KeyError: 'last'
+
+
+    #IndexError
+    list_fruit=["Apple","Banana","orange"]
+    print(list_fruit[4])       #in list_fruit we have 0,1,2 it is range of them you write 4 that is not exit (out of range)
+    >>>    print(list_fruit[4])
+                ~~~~~~~~~~^^^
+        IndexError: list index out of range
+
+
+    #Type Error
+    name="Ali"   
+    print(name+8) #we can not concatenate str with int
+    >>>    print(name+8)
+                ~~~~^~
+        TypeError: can only concatenate str (not "int") to str
+
+    # in programing we will use from Catching Exceptions to solve the Errors
+        
+        1:try:  
+            #something that might cause an exception 
+        2:except: 
+            #do this if there was an exception
+        3:else:
+            #do this if there were no exception
+        4:finally:
+            #do this no matter what happens
+
+    
+    examples:
+        file=open("file1","r")
+        file.read()
+        print(file)
+        >>>    file=open("file","r")
+                    ^^^^^^^^^^^^^^^^^
+            FileNotFoundError: [Errno 2] No such file or directory: 'file'
+
+        #when we use from excepion
+
+        try:
+            file=open("file","r")
+        except:
+            file=open("file","w")
+            file.write("somthing")
+            >>>Process finished with exit code 0
+
+
+        try:
+            file=open("file","r")
+            dict={"key":"value"}   #why dict does not show error because python will goto exption it will check
+            print(dict["none_exit_key"])  #it will look that file has excepion it will thing that I should ignore dict
+        except:      #it is general excepion
+            file=open("file","w")     #we fix the file by write exception but what about dict
+            file.write("something")
+
+        >>>Process finished with exit code 0
+
+    #but if we use from exit excepion of that 
+        try:
+            file=open("file","r")
+            dict={"key":"value"}
+            print(dict["none_exit_key"])
+        except FileNotFoundError:   #FileNotFoundError is the excepion of that
+            file=open("file","w")
+            file.write("somthing")
+
+        >>>    print(dict["none_exit_key"])         #show KeyError because 'none_exit_key' is not exit   
+                    ~~~~^^^^^^^^^^^^^^^^^
+            KeyError: 'none_exit_key'
+
+        #solution 
+            try:
+                file=open("file","r")
+                dict={"key":"value"}
+                print(dict["none_exit_key"])
+            except FileNotFoundError:
+                file=open("file","w")
+                file.write("somthing")
+            except KeyError as error_masage:                #it deos not show Error because we use excepion
+                print(f"Key {error_masage} is not exit sorry write anther one")
+
+            >>>Key 'error_masage' is not exit sorry write anther one
+
+
+        
+            try:
+                file=open("file","r")
+                dict={"key":"value"}
+                print(dict["none_exit_key"])
+            except FileNotFoundError:
+                file=open("file","w")
+                file.write("somthing")
+            except KeyError as error_masage:
+                print(f"Key {error_masage} is not exit sorry write anther one")
+            else:
+                files=file.read()
+                print(files)
+            finally:
+                file.close()
+                print("file is already close")
+
+    #raise exption:
+    
+        #enter test score at input promp
+        x=float(input("Enter the test score:"))
+        #condition statement for custom exception
+        if x<0 or x>100:
+            raise Exception("Customized Exception : value out of range")
+        #statement to catch pass
+        elif x>70:
+            grade="pass"
+            comment="well done"
+        #statement to catch pass
+        elif x<70:
+            grade="fail"
+            comment="Please try again"
+        print(grade)
+        print(comment)
+        print("====end of the test report====")
+#----------------------------------------------------------------------
+# raise exption:
+    try:
+        files=open("file","r")
+        dict={"key":"value"}
+        print(dict["non_exit_key"])
+    except FileNotFoundError:
+        files=open("file","a")
+        files.write("this this this siiis")
+    except KeyError:
+        print("this key you want to achieve is not exit")
+    else:
+        print("that is ok")
+    finally:
+        raise TypeError("This is completly range can you none me")
+    
+    >>>    raise TypeError("This is completly range can you none me")
+            TypeError: This is completly range can you none me
+
+#normal example:
+height=int(input("Enter your height:"))
+weight=int(input("Enter your weight:"))
+if height>3 or weight>400:
+    raise TypeError("Range=Human height is not upper than 3m")  #here we create a error when  input of height is >3 and weight is >400
+else:
+    print(f"The bmi is :{weight/height**2}")
+
+>>>    raise TypeError("Range=Human height is not upper than 3m")    #this is the error that you write to show
+        TypeError: Range=Human height is not upper than 3m
+
+#--------------------------------------------------------------------------------------------------------------------------------------------
+
+#example of Error and excepion Handling
+
+try:
+    n=int(input("Enter the number"))
+    n1=int(input("Enter the number"))
+    sum=n+n1
+    print(sum)   #because you take the data type int
+except ValueError:
+    print("please inter int number")
+else:
+    print("succesfully")
+finally:
+    print("close file")
+---------------------------
+try:
+    file=open("file","r")
+    dict={"key":"value"}
+    print(dict["none_exit_key"])
+except IOError:
+    file=open("file","w")
+    file.write("somthing")
+except KeyError as error_masage:
+    print(f"Key {error_masage} is not exit sorry write anther one")
+else:
+    files=file.read()
+    print(files)
+finally:
+    print("file is already close")
+----------------------------------
+try:
+
+    file=open("file","r")
+    dict={"key":"value"}
+    print(dict["none_exit_key"])
+except FileNotFoundError:
+    file=open("file","w")
+    file.write("somthing")
+except KeyError as error_masage:
+    print(f"Key {error_masage} is not exit sorry write anther one")
+else:
+    files=file.read()
+    print(files)
+finally:
+    print("file is already close")
+----------------------------------
+try:
+    n=int(input("Enter the numbeer:"))
+    print(99/n)
+    dict={"name":"ali"}
+    print(dict["key_not_exit"])
+except ZeroDivisionError:
+    print("it is not passible")
+except KeyError:
+    print("this key is not exit")
+except ValueError:
+    print(" you can not divide string with int")
+except:                       #this is genrale exception
+    print("something goes range sir/medem")
+else:
+    print("good")
+finally:
+    print("finish")
+#---------------------------------------
+fruit=["Apple","Banana","orange"]
+def make_pie(index):
+    try:
+        fruits=fruit[index]
+    except IndexError:
+        raise IndexError("you are out of range")
+    else:
+        print(fruits+" pie")
+    finally:
+        print("good bye")
+n=int(input("Enter the number: "))
+make_pie(n)
+#-----------------------------------------
+facebook_post=[
+    {"likes":32,"comments":2},
+    {"likes":23,"command":5},
+    {"likes":80,"commend":12},
+    {"comment":21,"shares":1},
+    {"likes":56,"comment":2}
+]
+total=0
+for char in facebook_post:
+    try:
+        total=total+char["likes"]
+    except KeyError:
+        pass
+print(total)
+>>> 191
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
